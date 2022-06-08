@@ -1,0 +1,19 @@
+﻿.show-menu { 
+    display :block;
+}
+
+.user-button{
+    margin-left: 1e m;
+}
+
+.x{
+    margin-left:2px
+}
+
+.top-row a{
+    margin-left:0;
+}
+
+.dropdown-item:hover{
+    background-color:white;
+}
