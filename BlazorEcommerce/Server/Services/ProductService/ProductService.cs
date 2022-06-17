@@ -4,6 +4,7 @@ namespace BlazorEcommerce.Server.Services.ProductService
 {
 	public class ProductService : IProductService
 	{
+
 		private readonly DataContext _context;
 
 		public ProductService(DataContext context)
@@ -27,7 +28,6 @@ namespace BlazorEcommerce.Server.Services.ProductService
 					.Include(x => x.Variants)
 					.ThenInclude(x => x.ProductType)
 					.FirstOrDefaultAsync(p=>p.Id == productId);
-
 
 			if(product == null)
             {
@@ -56,7 +56,8 @@ namespace BlazorEcommerce.Server.Services.ProductService
 			{
 				Data = await _context.Products.Where(x => x.Category.Url.ToLower().Equals(categoryUrl.ToLower())).Include(x => x.Variants).ToListAsync()
 			};
-			return response; 
+			
+            return response; 
         }
 
 		public async Task<ServiceResponse<List<string>>> GetProductSearchSuggestions(string searchText)

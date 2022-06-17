@@ -4,6 +4,7 @@
 @inject NavigationManager NavigationManager
 @inject ILocalStorageService LocalStorage
 @inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ICartService CartService
 
 
 <h3>Login</h3>
@@ -55,6 +56,8 @@
 
 			await LocalStorage.SetItemAsync("authToken", result.Data);
 			await AuthenticationStateProvider.GetAuthenticationStateAsync();
+			await CartService.StoreCartItems(true);
+			await CartService.GetCartItemsCount();
 			NavigationManager.NavigateTo(returnUrl);
 		}
 		else
