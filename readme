@@ -1,0 +1,8 @@
+This is the Second project I created in during my internship.
+I tried to do something different this time so for the frontend I went with Blazor, Though there is not much resource out there but I started learning it through 
+some youtube video and took help from the documentation.
+Backend is .NET 6 Web APi 
+Created WASM and now We are here
+
+Opinion on Blazor ->
+  For any c#,.NET developer who doesnt want to learn Javascript to learn a SPA like angular,react ;This is Everthing.
