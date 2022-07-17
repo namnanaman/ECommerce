@@ -200,6 +200,9 @@ namespace BlazorEcommerce.Server.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -215,6 +218,9 @@ namespace BlazorEcommerce.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Visible")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -226,100 +232,122 @@ namespace BlazorEcommerce.Server.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
+                            Deleted = false,
                             Description = "One Thursday morning, Arthur Dent discovers that his house is to be immediately demolished to make way for a bypass. He tries delaying the bulldozers by lying down in front of them. Ford Prefect, a friend of Arthur's, convinces him to go to a pub with him. Over several pints of beer, Ford explains that he is an alien from the vicinity of Betelgeuse, and a journalist working on the Hitchhiker's Guide to the Galaxy, a universal guide book. Ford warns that the Earth is to be demolished later that day by a race called Vogons, to make way for a hyperspace bypass.",
                             Featured = true,
                             ImageUrl = "https://picsum.photos/200",
-                            Title = "The Hitchhiker's Guide to the Galaxy"
+                            Title = "The Hitchhiker's Guide to the Galaxy",
+                            Visible = true
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 1,
+                            Deleted = false,
                             Description = "Ready Player One is a 2018 American science fiction adventure film based on Ernest Cline's novel of the same name. Directed by Steven Spielberg, from a screenplay by Zak Penn and Cline, it stars Tye Sheridan, Olivia Cooke, Ben Mendelsohn, Lena Waithe, T.J. Miller, Simon Pegg, and Mark Rylance. Set in 2045, much of humanity uses the OASIS, a virtual reality simulation, to escape the real world. The orphaned Wade Watts finds clues to a contest that promises the ownership of the OASIS to the winner, and he and his allies try to complete it before an evil corporation can do so.	",
                             Featured = false,
                             ImageUrl = "https://picsum.photos/200",
-                            Title = "Ready Player One"
+                            Title = "Ready Player One",
+                            Visible = true
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 1,
+                            Deleted = false,
                             Description = "Nineteen Eighty-Four (also stylised as 1984) is a dystopian social science fiction novel and cautionary tale written by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime. Thematically, it centres on the consequences of totalitarianism, mass surveillance and repressive regimentation of people and behaviours within society.[2][3] Orwell, a democratic socialist, modelled the totalitarian government in the novel after Stalinist Russia and Nazi Germany.[2][3][4] More broadly, the novel examines the role of truth and facts within politics and the ways in which they are manipulated.",
                             Featured = false,
                             ImageUrl = "https://picsum.photos/200",
-                            Title = "Nineteen Eighty-Four"
+                            Title = "Nineteen Eighty-Four",
+                            Visible = true
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 2,
+                            Deleted = false,
                             Description = "The Matrix is a 1999 science fiction action film written and directed by the Wachowskis, and produced by Joel Silver. Starring Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano, and as the first installment in the Matrix franchise, it depicts a dystopian future in which humanity is unknowingly trapped inside a simulated reality, the Matrix, which intelligent machines have created to distract humans while using their bodies as an energy source. When computer programmer Thomas Anderson, under the hacker alias \"Neo\", uncovers the truth, he \"is drawn into a rebellion against the machines\" along with other people who have been freed from the Matrix.",
                             Featured = false,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg",
-                            Title = "The Matrix"
+                            Title = "The Matrix",
+                            Visible = true
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 2,
+                            Deleted = false,
                             Description = "Back to the Future is a 1985 American science fiction film directed by Robert Zemeckis. Written by Zemeckis and Bob Gale, it stars Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover, and Thomas F. Wilson. Set in 1985, the story follows Marty McFly (Fox), a teenager accidentally sent back to 1955 in a time-traveling DeLorean automobile built by his eccentric scientist friend Doctor Emmett \"Doc\" Brown (Lloyd). Trapped in the past, Marty inadvertently prevents his future parents' meeting—threatening his very existence—and is forced to reconcile the pair and somehow get back to the future.",
                             Featured = true,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg",
-                            Title = "Back to the Future"
+                            Title = "Back to the Future",
+                            Visible = true
                         },
                         new
                         {
                             Id = 6,
                             CategoryId = 2,
+                            Deleted = false,
                             Description = "Toy Story is a 1995 American computer-animated comedy film produced by Pixar Animation Studios and released by Walt Disney Pictures. The first installment in the Toy Story franchise, it was the first entirely computer-animated feature film, as well as the first feature film from Pixar. The film was directed by John Lasseter (in his feature directorial debut), and written by Joss Whedon, Andrew Stanton, Joel Cohen, and Alec Sokolow from a story by Lasseter, Stanton, Pete Docter, and Joe Ranft. The film features music by Randy Newman, was produced by Bonnie Arnold and Ralph Guggenheim, and was executive-produced by Steve Jobs and Edwin Catmull. The film features the voices of Tom Hanks, Tim Allen, Don Rickles, Wallace Shawn, John Ratzenberger, Jim Varney, Annie Potts, R. Lee Ermey, John Morris, Laurie Metcalf, and Erik von Detten. Taking place in a world where anthropomorphic toys come to life when humans are not present, the plot focuses on the relationship between an old-fashioned pull-string cowboy doll named Woody and an astronaut action figure, Buzz Lightyear, as they evolve from rivals competing for the affections of their owner, Andy Davis, to friends who work together to be reunited with Andy after being separated from him.",
                             Featured = false,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
-                            Title = "Toy Story"
+                            Title = "Toy Story",
+                            Visible = true
                         },
                         new
                         {
                             Id = 7,
                             CategoryId = 3,
+                            Deleted = false,
                             Description = "Half-Life 2 is a 2004 first-person shooter game developed and published by Valve. Like the original Half-Life, it combines shooting, puzzles, and storytelling, and adds features such as vehicles and physics-based gameplay.",
                             Featured = false,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg",
-                            Title = "Half-Life 2"
+                            Title = "Half-Life 2",
+                            Visible = true
                         },
                         new
                         {
                             Id = 8,
                             CategoryId = 3,
+                            Deleted = false,
                             Description = "Diablo II is an action role-playing hack-and-slash computer video game developed by Blizzard North and published by Blizzard Entertainment in 2000 for Microsoft Windows, Classic Mac OS, and macOS.",
                             Featured = false,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png",
-                            Title = "Diablo II"
+                            Title = "Diablo II",
+                            Visible = true
                         },
                         new
                         {
                             Id = 9,
                             CategoryId = 3,
+                            Deleted = false,
                             Description = "Day of the Tentacle, also known as Maniac Mansion II: Day of the Tentacle, is a 1993 graphic adventure game developed and published by LucasArts. It is the sequel to the 1987 game Maniac Mansion.",
                             Featured = true,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/en/7/79/Day_of_the_Tentacle_artwork.jpg",
-                            Title = "Day of the Tentacle"
+                            Title = "Day of the Tentacle",
+                            Visible = true
                         },
                         new
                         {
                             Id = 10,
                             CategoryId = 3,
+                            Deleted = false,
                             Description = "The Xbox is a home video game console and the first installment in the Xbox series of video game consoles manufactured by Microsoft.",
                             Featured = false,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox-console.jpg",
-                            Title = "Xbox"
+                            Title = "Xbox",
+                            Visible = true
                         },
                         new
                         {
                             Id = 11,
                             CategoryId = 3,
+                            Deleted = false,
                             Description = "The Super Nintendo Entertainment System (SNES), also known as the Super NES or Super Nintendo, is a 16-bit home video game console developed by Nintendo that was released in 1990 in Japan and South Korea.",
                             Featured = false,
                             ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/e/ee/Nintendo-Super-Famicom-Set-FL.jpg",
-                            Title = "Super Nintendo Entertainment System"
+                            Title = "Super Nintendo Entertainment System",
+                            Visible = true
                         });
                 });
 
@@ -400,11 +428,17 @@ namespace BlazorEcommerce.Server.Migrations
                     b.Property<int>("ProductTypeId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
                     b.Property<decimal>("OriginalPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("Visible")
+                        .HasColumnType("bit");
 
                     b.HasKey("ProductId", "ProductTypeId");
 
@@ -417,120 +451,154 @@ namespace BlazorEcommerce.Server.Migrations
                         {
                             ProductId = 1,
                             ProductTypeId = 2,
+                            Deleted = false,
                             OriginalPrice = 19.99m,
-                            Price = 9.99m
+                            Price = 9.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 1,
                             ProductTypeId = 3,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 7.99m
+                            Price = 7.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 1,
                             ProductTypeId = 4,
+                            Deleted = false,
                             OriginalPrice = 29.99m,
-                            Price = 19.99m
+                            Price = 19.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 2,
                             ProductTypeId = 2,
+                            Deleted = false,
                             OriginalPrice = 14.99m,
-                            Price = 7.99m
+                            Price = 7.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 3,
                             ProductTypeId = 2,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 6.99m
+                            Price = 6.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 4,
                             ProductTypeId = 5,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 3.99m
+                            Price = 3.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 4,
                             ProductTypeId = 6,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 9.99m
+                            Price = 9.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 4,
                             ProductTypeId = 7,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 19.99m
+                            Price = 19.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 5,
                             ProductTypeId = 5,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 3.99m
+                            Price = 3.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 6,
                             ProductTypeId = 5,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 2.99m
+                            Price = 2.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 7,
                             ProductTypeId = 8,
+                            Deleted = false,
                             OriginalPrice = 29.99m,
-                            Price = 19.99m
+                            Price = 19.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 7,
                             ProductTypeId = 9,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 69.99m
+                            Price = 69.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 7,
                             ProductTypeId = 10,
+                            Deleted = false,
                             OriginalPrice = 59.99m,
-                            Price = 49.99m
+                            Price = 49.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 8,
                             ProductTypeId = 8,
+                            Deleted = false,
                             OriginalPrice = 24.99m,
-                            Price = 9.99m
+                            Price = 9.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 9,
                             ProductTypeId = 8,
+                            Deleted = false,
                             OriginalPrice = 0m,
-                            Price = 14.99m
+                            Price = 14.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 10,
                             ProductTypeId = 1,
+                            Deleted = false,
                             OriginalPrice = 299m,
-                            Price = 159.99m
+                            Price = 159.99m,
+                            Visible = true
                         },
                         new
                         {
                             ProductId = 11,
                             ProductTypeId = 1,
+                            Deleted = false,
                             OriginalPrice = 399m,
-                            Price = 79.99m
+                            Price = 79.99m,
+                            Visible = true
                         });
                 });
 

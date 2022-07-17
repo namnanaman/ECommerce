@@ -33,7 +33,7 @@ namespace BlazorEcommerce.Server.Migrations
                 table: "Categories",
                 keyColumn: "Id",
                 keyValue: 2,
-                column: "Visible",
+                column: "Visible", 
                 value: true);
 
             migrationBuilder.UpdateData(

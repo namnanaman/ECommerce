@@ -1,0 +1,13 @@
+﻿@page "/admin/users"
+@using BlazorEcommerce.Client.Services.UserService
+@inject IUserService UserService
+
+
+<h3>Users</h3>
+
+@code {
+	protected override async Task OnInitializedAsync()
+	{
+		await UserService.GetUsers();
+	}
+}
